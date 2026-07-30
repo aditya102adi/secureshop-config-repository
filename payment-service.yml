@@ -1,10 +1,16 @@
+server:
+  port: 8081
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/payment_db
+    username: postgres
+    password: postgres
 
-logging:
-  level:
-    com.secureshop.identity: DEBUG
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 10
 
 app:
-  environment: development
+  service-name: Identity Service
+  message: Identity configuration loaded from GitHub
