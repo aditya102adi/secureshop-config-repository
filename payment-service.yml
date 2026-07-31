@@ -1,16 +1,16 @@
 server:
-  port: 8084
+  port: 0
 
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/payment_db
     username: postgres
-    password: postgres
+    password: Test@123
 
     hikari:
       minimum-idle: 2
       maximum-pool-size: 10
 
 app:
-  service-name: Identity Service
-  message: Identity configuration loaded from GitHub
+  service-name: Payment Service
+  message: Payment configuration loaded from GitHub
